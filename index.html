@@ -7,21 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="myjscode.js"></script>
+    <link rel = "styleSheet" href="./index.css">
     <title>Document</title>
 </head>
 
 <body>
     <div class = "form">
     <form action="" id="myForm">
+        <div class="nameField">
         <label for="name">Name</label><br>
-        <input type="text" id="name" required> <br>
+        <input type="text" id="name" required>
+        </div> <br>
+        <div class="emailField">
         <label for="emai">Email</label><br>
-        <input type="text" id="email" required> <br>
+        <input type="text" id="email" required>
+        </div><br>
+        <div class="pswdField">
         <label for="password">Password</label><br>
-        <input type="password" id="pswd1" required> <br>
+        <input type="password" id="pswd1" required>
+        </div> <br>
+        <div class="pswdField2">
         <label for="cpassword">Confirm Password</label><br>
-        <input type="password" id="pswd2" required> <br>
-        <input type="submit">
+        <input type="password" id="pswd2" required> 
+        </div><br>
+        <input type="submit" id = "submit">
     </form>
     </div>
 </body>

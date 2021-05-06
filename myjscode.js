@@ -4,7 +4,7 @@ $(function () {
 
 
 function handleFormSubmit(e) {
-  alert("Form is being submitted");
+  
 
   e.preventDefault();
 }
@@ -13,7 +13,7 @@ function Name(){
 console.log("Name");
   var Name = document.getElementById('name');
   if (Name == ""){
-    alert("Please enter your name")
+    
   return(false)}
   else{
   return(true)}
@@ -29,7 +29,7 @@ function Email(){
     return (true)
   }
   else{
-    alert("You have entered an invalid email address!")
+    
     return (false)
 }
 }
@@ -41,7 +41,7 @@ function passValidation(){
   return(true)
   }
   else if(pass.length < 7){
-  alert("password too short, minimum 8 characters required")
+  
   return(false)
   }
 }
@@ -53,11 +53,11 @@ function CpassValidation(){
   var pass = document.getElementById('pswd1');
   var Cpass = document.getElementById('pswd2');
   if(pass == Cpass){
-    alert("Password created successfuly")
+    
   return (true)
   }
   else if(pass != pass){
-  alert("Password does not match")
+  
   return(false)
   }
 }

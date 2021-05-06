@@ -1,0 +1,51 @@
+body {
+  max-height: 700px;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  background-color: #1c2833;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #17202a;
+  font-size: 20px;
+  width: 30%;
+  height: 60%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  border: 20px solid #34495e;
+}
+label {
+  padding-bottom: 50px;
+}
+#name {
+  width: 140%;
+  height: 20px;
+}
+#email {
+  width: 140%;
+  height: 20px;
+}
+#pswd1 {
+  width: 140%;
+  height: 20px;
+}
+#pswd2 {
+  width: 140%;
+  height: 20px;
+}
+#submit {
+  width: 50%;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  background: #34495e;
+}
