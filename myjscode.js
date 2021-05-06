@@ -5,7 +5,7 @@ $(function () {
 
 function handleFormSubmit(e) {
   
-
+  alert("Form successfully submitted");
   e.preventDefault();
 }
 
