@@ -1,8 +1,4 @@
 
-
-
-
-
 document.querySelector('#submit').addEventListener('click', Submit_form);
 const namee = document.getElementById('name');
 const email = document.getElementById('email');
@@ -44,7 +40,7 @@ function passValidation(){
   if(pswd1.value.length >= 7){
   return(true);
   }
-  else if(pswd1.value.length < 7){
+  else{
   alert('password too short');
   return(false);
   }
@@ -61,6 +57,7 @@ function CpassValidation(){
   return(false);
   }
 }
+
 
 function Submit_form(e){
   if(nameValidation() && Email && passValidation() && CpassValidation() == true){
