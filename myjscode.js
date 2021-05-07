@@ -1,69 +1,71 @@
-$(function () {
-  $("#myForm").submit(handleFormSubmit);
-});
 
 
-function handleFormSubmit(e) {
-  
-  alert("Form successfully submitted");
-  e.preventDefault();
-}
 
-function Name(){
-console.log("Name");
-  var Name = document.getElementById('name');
-  if (Name == ""){
+
+
+document.querySelector('#submit').addEventListener('click', Submit_form);
+const namee = document.getElementById('name');
+const email = document.getElementById('email');
+const pswd1 = document.getElementById('pswd1');
+const pswd2 = document.getElementById('pswd2');
+
+namee.addEventListener('blur', nameValidation);
+email.addEventListener('blur', Email);
+pswd1.addEventListener('blur', passValidation);
+pswd2.addEventListener('blur', CpassValidation);
+
+
+
+function nameValidation(){
+  if (namee.value.length != 0){
     
-  return(false)}
+  return(true);
+}
   else{
-  return(true)}
+    alert('Invalid name');
+  return(false);
+}
 }
 
 function Email(){
-  console.log("Email");
-  var em = document.getElementById('email');
-  var form = document.getElementById('myForm');
-  var mail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  if (mail.test(form.em))
+
+  if (email.value.length != 0)
   {
-    return (true)
+    return (true);
   }
   else{
-    
-    return (false)
+    alert('invalid email');
+    return (false);
 }
 }
 
 function passValidation(){
-  console.log("Password");
-  var pass = document.getElementById('pswd1');
-  if(pass.length >= 7){
-  return(true)
-  }
-  else if(pass.length < 7){
   
-  return(false)
+  if(pswd1.value.length >= 7){
+  return(true);
+  }
+  else if(pswd1.value.length < 7){
+  alert('password too short');
+  return(false);
   }
 }
 
 function CpassValidation(){
 
-  console.log("Confirm Password");
-  
-  var pass = document.getElementById('pswd1');
-  var Cpass = document.getElementById('pswd2');
-  if(pass == Cpass){
+  if(pswd1.value === pswd2.value){
     
-  return (true)
+  return (true);
   }
-  else if(pass != pass){
-  
-  return(false)
+  else{
+  alert('password does not match');
+  return(false);
   }
 }
 
-
-window.onload = Name;
-window.onload = Email;
-//window.onload = passValidation;
-//window.onload = CpassValidation;
+function Submit_form(e){
+  if(nameValidation() && Email && passValidation() && CpassValidation() == true){
+    alert('Form submission successful');
+    location.reload();
+  }
+  e.preventDefault();
+}
